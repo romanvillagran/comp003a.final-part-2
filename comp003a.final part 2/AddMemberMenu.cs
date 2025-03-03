@@ -12,7 +12,7 @@ namespace comp003a.final_part_2
         {
             try
             {
-                Console.Write("Enter the member's name: "); // Prompt for name
+                Console.Write("Enter the member's name: "); // ask for name
                 string name = Console.ReadLine(); // Read name
                 
                 // Check if the name is null or empty
@@ -23,9 +23,9 @@ namespace comp003a.final_part_2
                 }
 
 
-                Console.Write("Enter the member's age: "); // Prompt for age
+                Console.Write("Enter the member's age: "); // asks for age
                 int age = int.Parse(Console.ReadLine()); // Read age
-                Console.Write("Enter the member's plan (Basic/Premium): "); // Prompt for plan
+                Console.Write("Enter the member's plan (Basic/Premium): "); // asks for plan
                 string plan = Console.ReadLine(); // Read plan
 
                 // Check if the plan is valid

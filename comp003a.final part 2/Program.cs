@@ -25,7 +25,7 @@
                         AddMemberMenu.AddMember(manager); // Call the AddMember method
                         break;
                     case "2":
-                        ViewMemberMenu.ViewMembers(manager); // Call the ViewMembers method
+                        ViewMemberMenu.ViewMember(manager); // Call the ViewMembers method
                         break;
                     case "3":
                         EditMemberMenu.EditMember(manager); // Call the EditMember method

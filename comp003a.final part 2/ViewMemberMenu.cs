@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace comp003a.final_part_2
 {
-    internal class ViewMemberMenu
+    public static class ViewMemberMenu
     {
+        public static void ViewMember(MemberManager manager)
+        {
+            manager.ViewMembers(); // Call the ViewMembers method
+        }
     }
 }
