@@ -45,7 +45,7 @@ namespace comp003a.final_part_2
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Error try again");
             }
         }
     }

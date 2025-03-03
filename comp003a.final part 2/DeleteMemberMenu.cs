@@ -31,13 +31,13 @@ namespace comp003a.final_part_2
                 }
                 catch (KeyNotFoundException ex)
                 {
-                    // This assumes DeleteMember throws KeyNotFoundException when member not found
-                    Console.WriteLine($"Member '{name}' not found in the system.");
+                    // 
+                    Console.WriteLine($"Member '{name}' not found");
                 }
                 catch (Exception ex)
                 {
-                    // Other unexpected errors
-                    Console.WriteLine($"Error deleting member: {ex.Message}");
+                   
+                    Console.WriteLine($"Error");
                 }
             }
         }
