@@ -8,6 +8,10 @@ namespace comp003a.final_part_2
 {
     public static class ViewMemberMenu
     {
+        /// <summary>
+        /// views members
+        /// </summary>
+        /// <param name="manager"></param>
         public static void ViewMember(MemberManager manager)
         {
             manager.ViewMembers(); // Call the ViewMembers method

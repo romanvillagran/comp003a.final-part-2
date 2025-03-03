@@ -9,12 +9,12 @@ namespace comp003a.final_part_2
 {
     public class Member
     {
-        // Public fields (beginners often use public fields instead of properties)
+        // Public fields
         public string Name;
         public int Age;
         public string Plan;
 
-        // Constructor to initialize a member
+        // initialize a member
         public Member(string name, int age, string plan)
         {
             Name = name;
@@ -22,7 +22,7 @@ namespace comp003a.final_part_2
             Plan = plan;
         }
 
-        // Method to display member details
+        // display member details
         public void Display()
         {
             Console.WriteLine($"Name: {Name}, Age: {Age}, Plan: {Plan}");

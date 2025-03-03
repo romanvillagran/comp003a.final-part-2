@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace comp003a.final_part_2
 {
+    
     public class MemberManager
     {
         // Public list to store members 
@@ -17,7 +18,7 @@ namespace comp003a.final_part_2
             Members.Add(member); // Add the member to the list
             Console.WriteLine("Member added successfully");
         }
-
+        
         // Method to view all members
         public void ViewMembers()
         {
@@ -32,31 +33,61 @@ namespace comp003a.final_part_2
                 Console.WriteLine($"{i + 1}. Name: {Members[i].Name}, Age: {Members[i].Age}, Plan: {Members[i].Plan}");
             }
         }
-
-        // Method to update a member
-        public void UpdateMember(int index, Member updatedMember)
+        /// <summary>
+        /// this updates a member
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="updatedMember"></param>
+        public void UpdateMember(string name, Member updatedMember)
         {
-            if (index < 0 || index >= Members.Count) // Check if the index is valid
+            bool memberFound = false;
+
+            for (int i = 0; i < Members.Count; i++)
             {
-                Console.WriteLine("Invalid member");
-                return;
+                if (Members[i].Name == name) // Check if this is the member we want to update
+                {
+                    Members[i] = updatedMember; // Update the member
+                    memberFound = true;
+                    break; // Exit the loop once we've found and updated the member
+                }
             }
 
-            Members[index] = updatedMember; // Update the member
-            Console.WriteLine("Member updated successfully");
-        }
-
-        // Method to delete a member
-        public void DeleteMember(int index)
-        {
-            if (index < 0 || index >= Members.Count) // Check if the index is valid
+            if (memberFound)
             {
-                Console.WriteLine("Invalid member");
-                return;
+                Console.WriteLine("Member updated successfully");
+            }
+            else
+            {
+                Console.WriteLine("Member not found");
+            }
+        }
+        /// <summary>
+        /// this deletes a member
+        /// </summary>
+        /// <param name="name"></param>
+        public void DeleteMember(string name)
+        {
+            bool memberFound = false;
+
+            for (int i = 0; i < Members.Count; i++)
+            {
+                if (Members[i].Name == name) // Check if this is the member we want to delete
+                {
+                    Members.RemoveAt(i); // Remove the member
+                    memberFound = true;
+                    break; // Exit the loop once we've found and deleted the member
+                }
             }
 
-            Members.RemoveAt(index); // Remove the member
-            Console.WriteLine("Member deleted successfully");
+            if (memberFound)
+            {
+                Console.WriteLine("Member deleted successfully");
+            }
+            else
+            {
+                Console.WriteLine("Member not found");
+            }
         }
+       
     }
 }

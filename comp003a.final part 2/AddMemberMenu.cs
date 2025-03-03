@@ -8,6 +8,10 @@ namespace comp003a.final_part_2
 {
     public static class AddMemberMenu
     {
+        /// <summary>
+        /// ask the user to input information about the member
+        /// </summary>
+        /// <param name="manager"></param>
         public static void AddMember(MemberManager manager)
         {
             try
