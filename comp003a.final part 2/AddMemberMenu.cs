@@ -14,6 +14,15 @@ namespace comp003a.final_part_2
             {
                 Console.Write("Enter the member's name: "); // Prompt for name
                 string name = Console.ReadLine(); // Read name
+                
+                // Check if the name is null or empty
+                if (string.IsNullOrEmpty(name))
+                {
+                    Console.WriteLine("Name cannot be empty");
+                    return; 
+                }
+
+
                 Console.Write("Enter the member's age: "); // Prompt for age
                 int age = int.Parse(Console.ReadLine()); // Read age
                 Console.Write("Enter the member's plan (Basic/Premium): "); // Prompt for plan
@@ -27,7 +36,7 @@ namespace comp003a.final_part_2
                 }
 
                 // Create a new member and add it to the list
-                Member newMember = new(name, age, plan);
+                Member newMember = new Member(name, age, plan);
                 manager.AddMember(newMember);
             }
             catch (Exception ex)
